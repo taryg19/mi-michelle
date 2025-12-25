@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>FELIZ NAVIDAAAAAAAAD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg0:#07040c;
+      --bg1:#120624;
+      --pink:#ff4fd8;
+      --pink2:#ff8ef1;
+      --pink3:#ffb3f7;
+      --gold:#d7b86a;
+      --gold2:#f3e2a7;
+      --text:#f6eaff;
+      --shadow:0 24px 60px rgba(0,0,0,.85);
+      --ring:0 0 0 2px rgba(255,79,216,.25),0 0 40px rgba(255,79,216,.25);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0;font-family:"Poppins",system-ui;}
+
+    body{
+      height:100vh;overflow:hidden;color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 18% 18%, rgba(255,79,216,.22), transparent 60%),
+        radial-gradient(900px 500px at 82% 24%, rgba(255,142,241,.16), transparent 60%),
+        linear-gradient(180deg,var(--bg0),var(--bg1));
+    }
+
+    .background{
+      position:fixed;inset:0;
+      background:url("sera.jpg") no-repeat;
+      background-size:cover;
+      background-position:50% 38%;
+      z-index:-3;
+    }
+
+    .overlay{
+      position:fixed;inset:0;
+      background:
+        radial-gradient(circle at top, rgba(255, 255, 255, 0), transparent 55%),
+        rgba(0,0,0,.75);
+      z-index:-2;
+    }
+
+    .modal-backdrop{
+      position:fixed;inset:0;
+      display:flex;align-items:center;justify-content:center;
+      padding:1.5rem;
+    }
+
+    .modal{
+      max-width:540px;width:100%;max-height:80vh;
+      background:linear-gradient(180deg,rgba(108, 78, 147, 0.95),rgba(10,5,18,.95));
+      border-radius:20px;padding:1.75rem 1.9rem;
+      display:flex;flex-direction:column;position:relative;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(215,184,106,.25);
+    }
+
+    .modal-header{
+      font-family:"Cinzel",serif;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      font-weight:700;
+      margin-bottom:.75rem;
+      background:linear-gradient(90deg,var(--gold2),var(--pink2));
+      -webkit-background-clip:text;
+      color:transparent;
+    }
+
+    .modal-body{
+      flex:1;overflow-y:auto;white-space:pre-line;
+      line-height:1.6;font-size:.98rem;
+      padding-right:6px;
+    }
+
+    .modal-footer{
+      display:flex;justify-content:flex-end;
+      padding-top:1rem;gap:.5rem;
+    }
+
+    button{
+      border:none;cursor:pointer;
+      padding:.6rem 1.3rem;border-radius:999px;
+      text-transform:uppercase;font-weight:800;
+      letter-spacing:.08em;
+      background:linear-gradient(90deg,var(--pink2),var(--pink));
+      color:#140624;
+      box-shadow:0 14px 30px rgba(255,79,216,.25);
+    }
+
+    .gift-wrapper{
+      display:flex;align-items:center;gap:1rem;
+      justify-content:center;margin-top:12px;flex-wrap:wrap;
+    }
+
+    .gift-img{
+      max-width:90px;border-radius:14px;
+      box-shadow:0 12px 26px rgba(0,0,0,.55);
+    }
+
+    .code-box{
+      font-family:monospace;
+      background:rgba(255,255,255,.08);
+      border:1px dashed rgba(255,79,216,.4);
+      border-radius:14px;
+      padding:.9rem 1rem;
+      letter-spacing:.16em;
+    }
+
+    .hidden{display:none;}
+
+    .typewriter-cursor::after{
+      content:"▋";margin-left:2px;
+      animation:blink .8s infinite;color:var(--pink2);
+    }
+
+    @keyframes blink{50%{opacity:0;}}
+    
+  </style>
+</head>
+
+<body>
+  <div class="background"></div>
+  <div class="overlay"></div>
+
+  <audio id="bg-music" loop>
+    <source src="cancion.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="modal-backdrop" id="modal-0">
+    <div class="modal">
+      <div class="modal-header">FELIZ NAVIDAD, FELIZ AÑO NUEVO, FELIZ TODO</div>
+      <div class="modal-body typewriter">
+Llegaste a mi vida como regalo de navidad,
+ O mejor dicho, como milagro de navidad. 
+ 
+ (Ya sabes, por la época del año y así aunque sé que te conocí en noviembre)
+
+ 
+      </div>
+      <div class="modal-footer">
+        <button id="btn-start">*Tose*</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop hidden" id="modal-1">
+    <div class="modal">
+      <div class="modal-header">JAJA, JEJE, JIJI, JO-HO-JO-HO-JO-HO-JO-HO, JUJU</div>
+      <div class="modal-body typewriter">
+La distancia de Monterrey a Puebla es de 700 y tantos kilometros en línea recta, pero si sigues una ruta es como de 1000 y tanto.
+
+Sé que es un dato que no necesitabas, pero es intrigante ver qué tantas maneras puede uno imaginar para intentar "acortar" esa distancia.
+
+Ojalá pueda descubrir contigo algunas de esas formas de "estar" sin precisamente estar ahí.
+      </div>
+      <div class="modal-footer">
+        <button id="btn-to-2">el mejor regalo eres tú, Eric</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop hidden" id="modal-2">
+    <div class="modal">
+      <div class="modal-header">No, lo eres tú Mi-Michelle</div>
+
+      <div class="modal-body">
+        <div class="typewriter">
+Creo que esta será mi manera de hacerlo (Por ahora), pero espero no sea la única ocasión.
+
+Te quiero mucho.
+Con cariño: Yo, quién más?
+
+(Si alguién más dime y me alejo yo solito, aunque quiera una hija tuya en mi vientre)
+
+Esto aún está en construcción, quiero hacer algo bonito para los dos. Por el momento, será esto, aún no es seguro en código, pero eventualmente se volverá nuestro lugar seguro. Te quiero, te quiero, te quiero.
+        </div>
+
+        <div class="gift-wrapper">
+          <img src="amazon.jpg" class="gift-img">
+          <div class="code-box">2YB8-BDZC7M-EKAN</div>
+        </div>
+
+      <div class="modal-footer">
+        <button id="btn-close">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="end-message" class="hidden">
+    <p>Página en construcción... por ahora ✨</p>
+  </div>
+
+<script>
+  const modal0=document.getElementById("modal-0");
+  const modal1=document.getElementById("modal-1");
+  const modal2=document.getElementById("modal-2");
+  const music=document.getElementById("bg-music");
+
+  const btnStart=document.getElementById("btn-start");
+  const btnTo2=document.getElementById("btn-to-2");
+  const btnClose=document.getElementById("btn-close");
+
+  function showModal(show,...hide){
+    hide.forEach(m=>m.classList.add("hidden"));
+    show.classList.remove("hidden");
+    startTypewriter(show);
+  }
+
+  function startTypewriter(container){
+    const el=container.querySelector(".typewriter");
+    if(!el||el.dataset.done)return;
+    const text=el.textContent.trim();
+    el.textContent="";el.dataset.done=true;
+    el.classList.add("typewriter-cursor");
+    let i=0;
+    const step=()=>{if(i<text.length){el.textContent+=text[i++];setTimeout(step,30);}
+      else el.classList.remove("typewriter-cursor");};
+    step();
+  }
+
+  startTypewriter(modal0);
+
+  btnStart.onclick=()=>{music.play().catch(()=>{});showModal(modal1,modal0);}
+  btnTo2.onclick=()=>showModal(modal2,modal1);
+  btnClose.onclick=()=>{modal0.classList.add("hidden");modal1.classList.add("hidden");modal2.classList.add("hidden");}
+</script>
+
+</body>
+</html>
