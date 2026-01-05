@@ -122,10 +122,21 @@
       animation:blink .8s infinite;color:var(--pink2);
     }
 
+    #days-message {
+    min-height: 220px;
+    padding: 3rem 2rem;
+    text-align: center;
+    }
+
+
     @keyframes blink{50%{opacity:0;}}
     
   </style>
 </head>
+
+<p id="days-message">
+  Hasta ahorita hemos pasado <span id="days-counter"></span> días siendo futuros esposos.
+</p>
 
 <body>
   <div class="background"></div>
@@ -208,6 +219,26 @@ Esto aún está en construcción, quiero hacer algo bonito para los dos. Por el 
   const btnStart=document.getElementById("btn-start");
   const btnTo2=document.getElementById("btn-to-2");
   const btnClose=document.getElementById("btn-close");
+
+  function actualizarContadorDias() {
+  const startDate = new Date(2026, 0, 4);
+
+  const today = new Date();
+  const todayMidnight = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+
+  const diffMs = todayMidnight - startDate;
+  const msPerDay = 1000 * 60 * 60 * 24;
+  const days = Math.floor(diffMs / msPerDay);
+
+  const counterEl = document.getElementById("days-counter");
+  if (counterEl) {
+    counterEl.textContent = days >= 0 ? days : 0;
+  }
+}
+
+// Llamamos al cargar la página
+actualizarContadorDias();
+
 
   function showModal(show,...hide){
     hide.forEach(m=>m.classList.add("hidden"));
